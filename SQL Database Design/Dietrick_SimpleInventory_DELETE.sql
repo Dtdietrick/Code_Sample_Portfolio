@@ -1,0 +1,10 @@
+/*Delete Garbage*/
+USE SimpleInventory
+GO
+
+DELETE FROM RANGED
+WHERE Damage = 0 OR Range < 3
+DELETE FROM MELEE
+WHERE Damage = 0
+DELETE FROM PLAYER
+WHERE HEALTH = 0
